@@ -7,8 +7,13 @@ import slide3 from "../assets/images/slide3.jpg"
 import axios from "axios";
 import "../assets/css/App.css"
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../CartSlice";
+
 const Home = () => {
   const [mydata,setMydata] = useState([]);
+  const mycart = useSelector(state=>state.MyCart.cart);
+  const dispatch = useDispatch();
   const Loaddata=async()=>{
     const api = "http://localhost:3000/Items";
     const response = await axios.get(api)
@@ -29,7 +34,7 @@ const Home = () => {
         <Card.Text>
           {key.Description}
         </Card.Text>
-        <Button variant="primary">Add To Cart</Button>
+        <Button variant="primary" onClick={()=>dispatch(addToCart(key))} >Add To Cart</Button>
       </Card.Body>
     </Card>
       </>

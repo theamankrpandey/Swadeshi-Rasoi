@@ -2,7 +2,7 @@ import { BrowserRouter, Routes,Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Snacks from "./Snacks";
-
+import MyCart from "./pages/MyCart";
 
 const App=()=>{
   return(
@@ -13,6 +13,7 @@ const App=()=>{
       <Route index element={<Home/>} />
       <Route path="home" element={<Home/>} />
       <Route path="snacks" element={<Snacks/>} />
+      <Route path="mycart" element={<MyCart/>} />
 
       </Route>
     </Routes>
