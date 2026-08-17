@@ -15,7 +15,7 @@ const Home = () => {
   const mycart = useSelector(state=>state.MyCart.cart);
   const dispatch = useDispatch();
   const Loaddata=async()=>{
-    const api = "http://localhost:3000/Items";
+    const api = "http://127.0.0.1:8000/items/";
     const response = await axios.get(api)
     console.log(response.data)
     setMydata(response.data)
