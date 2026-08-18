@@ -111,7 +111,7 @@ const TopNav = () => {
               <span className="cart-count">{cartlength}</span>
             </div>
 
-            <span className="cart-text">My Cart</span>
+            
           </Link>
         </div>
       </Navbar>

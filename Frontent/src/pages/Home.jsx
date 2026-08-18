@@ -68,7 +68,7 @@ const Home = () => {
           <h1>
             Delicious
             <span>Fast Food</span>
-             for Every Moment
+            for Every Moment
           </h1>
 
           <p>
@@ -231,14 +231,148 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="food-section" className="food-section">
-        <div className="food-heading">
-          <span>OUR MENU</span>
-          <h2>Choose Your Favorite</h2>
-          <p>Freshly prepared food made with love and premium ingredients.</p>
+      <section className="story-section">
+        <div className="story-left">
+          <div className="story-badge">
+            <strong>12+</strong>
+            <span>Years of Excellence</span>
+          </div>
+
+          <img
+            className="story-main-img"
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=900&fit=crop"
+            alt="Our Restaurant"
+          />
+
+          <img
+            className="story-small-img"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop"
+            alt="Fine Dining"
+          />
         </div>
 
-        <div className="food-container">{ans}</div>
+        <div className="story-right">
+          <span className="story-tag">Our Story</span>
+
+          <h2 className="story-heading">
+            We Invite You to Visit
+            <br />
+            Our <span>Food Restaurant</span>
+          </h2>
+
+          <p className="story-text">
+            Founded in 2012, Sarab began as a small corner joint with a big
+            dream - to serve food that brings people together. Today we're proud
+            to serve thousands of happy customers every week with the same
+            passion that started it all.
+          </p>
+
+          <div className="story-features">
+            <div className="story-feature-item">
+              <div className="story-feature-icon">🌿</div>
+              <div>
+                <h4>100% Fresh Ingredients</h4>
+                <p>
+                  We source locally and sustainably. Every ingredient is
+                  hand-picked daily for maximum freshness.
+                </p>
+              </div>
+            </div>
+
+            <div className="story-feature-item">
+              <div className="story-feature-icon">🏅</div>
+              <div>
+                <h4>Award-Winning Recipes</h4>
+                <p>
+                  Our signature recipes have won national culinary awards 5
+                  years in a row.
+                </p>
+              </div>
+            </div>
+
+            <div className="story-feature-item">
+              <div className="story-feature-icon">🚚</div>
+              <div>
+                <h4>Lightning-Fast Delivery</h4>
+                <p>
+                  Order online and get hot, fresh food at your door in under 25
+                  minutes, guaranteed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            className="story-cta-button"
+            onClick={() =>
+              document
+                .getElementById("food-section")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            📖 View Full Menu
+          </button>
+        </div>
+      </section>
+
+      <section id="food-section" className="menu-section">
+        <div className="menu-heading">
+          <span>What's Cooking</span>
+          <h2>
+            Our Delicious <b>Menu</b>
+          </h2>
+        </div>
+
+        <div className="menu-filters">
+          <button className="menu-filter active">All</button>
+          <button className="menu-filter">Burgers</button>
+          <button className="menu-filter">Pizza</button>
+          <button className="menu-filter">Chicken</button>
+          <button className="menu-filter">Wraps</button>
+          <button className="menu-filter">Desserts</button>
+          <button className="menu-filter">Pasta</button>
+        </div>
+
+        <div className="menu-container">
+          {mydata.map((item) => (
+            <div className="menu-card" key={item.id}>
+              <div className="menu-img-wrap">
+                
+                  <span className={`menu-tag menu-tag-${item.TagType}`}>
+                    ★ {item.Tag}
+                  </span>
+                
+                <span className="menu-heart">♡</span>
+                <img src={item.Image} alt={item.Name} />
+              </div>
+
+              <div className="menu-card-body">
+                <div className="menu-category">{item.Category}</div>
+                <h4 className="menu-name">{item.Name}</h4>
+                <p className="menu-desc">{item.Description}</p>
+
+                <div className="menu-bottom">
+                  <div>
+                    <span className="menu-price">₹{item.Price}</span>
+                    {item.OldPrice && (
+                      <span className="menu-old-price">₹{item.OldPrice}</span>
+                    )}
+                    <div className="menu-rating">★ ({item.Rating})</div>
+                  </div>
+
+                  <button
+                    className="menu-add-button"
+                    onClick={() => dispatch(addToCart(item))}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button className="menu-view-all-button">▦ View Full Menu</button>
       </section>
     </div>
   );

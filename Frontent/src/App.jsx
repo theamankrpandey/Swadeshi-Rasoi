@@ -12,9 +12,8 @@ const App=()=>{
       <Route path="/" element={<Layout/>} >
       <Route index element={<Home/>} />
       <Route path="home" element={<Home/>} />
-      <Route path="snacks" element={<Snacks/>} />
-      <Route path="mycart" element={<MyCart/>} />
-
+      <Route path="snacks" element={<Snacks/>}/>
+      <Route path="mycart" element={<MyCart/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
