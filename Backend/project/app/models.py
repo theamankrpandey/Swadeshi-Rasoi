@@ -9,6 +9,10 @@ class Item(models.Model):
     Restaurant_Name = models.CharField(max_length=200)
     Price = models.IntegerField()
     Quantity = models.IntegerField(default=1)
+    OldPrice = models.IntegerField(null=True, blank=True)
+    Rating = models.IntegerField(default=0)
+    Tag = models.CharField(max_length=50, null=True, blank=True)
+    TagType = models.CharField(max_length=20, null=True, blank=True)
 
     def __str__(self):
         return self.Name
