@@ -68,7 +68,7 @@ const Home = () => {
           <h1>
             Delicious
             <span>Fast Food</span>
-            for Every Moment
+             for Every Moment
           </h1>
 
           <p>

@@ -554,25 +554,70 @@ body {
   font-size: 12px;
 }
 
-@media (max-width: 1000px) {
-  .category-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 991px) {
   .home-section {
-    padding: 60px 5%;
+    min-height: 650px;
+    padding: 70px 6%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-content {
+    width: 60%;
+  }
+
+  .home-content h1 {
+    font-size: clamp(50px, 7vw, 70px);
+    line-height: 1;
+    letter-spacing: -3px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+    max-width: 500px;
+    color: white;
+  }
+
+  .home-right {
+    width: 40%;
+  }
+
+  .offer-card {
+    left: -20px;
+  }
+
+  .delivery-card {
+    right: -10px;
+  }
+
+  .rating-card {
+    right: 0;
+  }
+
+  .food-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .home-section {
+    min-height: 600px;
+    padding: 60px 6%;
   }
 
   .home-content {
     width: 100%;
+    max-width: 650px;
+  }
+
+  .home-content h1 {
+    font-size: clamp(48px, 9vw, 65px);
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .home-right {
@@ -580,32 +625,69 @@ body {
   }
 
   .food-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 600px) {
   .home-section {
-    min-height: auto;
-    padding: 50px 25px;
+    min-height: 560px;
+    padding: 50px 25px 60px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-content {
+    width: 100%;
+  }
+
+  .small-badge {
+    font-size: 12px;
+    padding: 9px 15px 9px 8px;
+    margin-bottom: 25px;
+  }
+
+  .small-badge span {
+    width: 29px;
+    height: 29px;
+    font-size: 14px;
   }
 
   .home-content h1 {
-    font-size: 55px;
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: 1.02;
     letter-spacing: -2px;
-    
   }
 
   .home-content p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 22px 0;
   }
 
   .home-buttons {
-    gap: 15px;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+  }
+
+  .menu-button {
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+
+  .story-button {
+    font-size: 14px;
   }
 
   .home-details {
-    flex-wrap: wrap;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px 0;
   }
 
@@ -613,15 +695,135 @@ body {
     padding: 0 15px;
   }
 
+  .home-details div:nth-child(2) {
+    border-right: none;
+  }
+
+  .home-details strong {
+    font-size: 23px;
+  }
+
+  .home-details small {
+    font-size: 9px;
+  }
+
   .food-section {
-    padding: 60px 20px;
+    padding: 55px 20px;
   }
 
   .food-heading h2 {
-    font-size: 38px;
+    font-size: 36px;
+    line-height: 1.1;
   }
 
   .food-container {
     grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .food-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .food-card .card-body {
+    padding: 20px;
+  }
+
+  .food-card .card-title {
+    font-size: 19px;
+  }
+
+  .food-card .card-text {
+    min-height: auto;
+    font-size: 13px;
+  }
+
+  .category-section {
+    padding-bottom: 60px;
+  }
+
+  .category-heading {
+    padding: 0 20px;
+    margin-bottom: 35px;
+  }
+
+  .category-heading h2 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .category-heading p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 0 20px;
+  }
+
+  .category-card {
+    padding: 20px 10px;
+  }
+
+  .category-card img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-section {
+    padding: 45px 18px 55px;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .home-content p {
+    font-size: 13px;
+  }
+
+  .home-details strong {
+    font-size: 20px;
+  }
+
+  .home-details small {
+    font-size: 8px;
+  }
+
+  .food-section {
+    padding: 45px 15px;
+  }
+
+  .food-heading h2 {
+    font-size: 31px;
+  }
+
+  .food-card img {
+    height: 220px;
+  }
+
+  .category-heading {
+    padding: 0 15px;
+  }
+
+  .category-heading h2 {
+    font-size: 30px;
+  }
+
+  .category-grid {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .category-card img {
+    width: 65px;
+    height: 65px;
   }
 }
