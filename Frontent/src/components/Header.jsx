@@ -19,15 +19,15 @@ const TopNav = () => {
           {/* Left Side */}
           <Nav className="me-auto">
             <Nav.Link style={{ color: "#aaa", fontSize: "17px" }}>
-              📞 +1 (800) 123-4567
+              📞 +91 99292xxxxx
             </Nav.Link>
 
             <Nav.Link style={{ color: "#aaa", fontSize: "17px" }}>
-              ✉️ hello@sarabfood.com
+              ✉️ YourEmail.com
             </Nav.Link>
 
             <Nav.Link style={{ color: "#aaa", fontSize: "17px" }}>
-              📍 42 Flavor Street, NY
+              📍 India
             </Nav.Link>
           </Nav>
 
