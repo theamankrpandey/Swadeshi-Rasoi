@@ -24,3 +24,15 @@ class FoodShow(models.Model):
 
     def __str__(self):
         return self.Name
+
+class Chef(models.Model):
+    Name = models.CharField(max_length=200)
+    Image = models.URLField()
+    Role = models.CharField(max_length=100)
+    Experience = models.CharField(max_length=50)
+    Instagram = models.URLField(null=True, blank=True)
+    Facebook = models.URLField(null=True, blank=True)
+    Twitter = models.URLField(null=True, blank=True)
+
+    def __str__(self):
+        return self.Name

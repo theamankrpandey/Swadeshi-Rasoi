@@ -10,3 +10,8 @@ class ItemViewSet(ModelViewSet):
 class FoodShowViewSet(ModelViewSet):
     queryset = FoodShow.objects.all()
     serializer_class = FoodShowSerializer
+
+
+class ChefViewSet(ModelViewSet):
+    queryset = Chef.objects.all()
+    serializer_class = ChefSerializer
