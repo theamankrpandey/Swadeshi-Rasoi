@@ -23,7 +23,9 @@ from app.views import *
 
 router = DefaultRouter()
 router.register(r"items", ItemViewSet, basename="items")
+router.register(r"foodshow", FoodShowViewSet, basename="foodshow")
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    
 ]

@@ -16,3 +16,11 @@ class Item(models.Model):
 
     def __str__(self):
         return self.Name
+
+class FoodShow(models.Model):
+    Name = models.CharField(max_length=200)
+    Image = models.URLField()
+    Description = models.TextField()
+
+    def __str__(self):
+        return self.Name
