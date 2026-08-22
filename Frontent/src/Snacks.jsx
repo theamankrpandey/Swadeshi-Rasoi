@@ -1,7 +1,11 @@
+import Menu from "./components/Menu";
+
 const Snacks=()=>{
     return(
         <>
-        <h1>Snacks Is Here</h1>
+        <section>
+            <Menu/>
+        </section>
         </>
     )
 }

@@ -1,0 +1,153 @@
+.showcase-section {
+  padding: 90px 7%;
+  background: #fffaf4;
+}
+
+.showcase-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.showcase-heading span {
+  color: #ed2d1d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.showcase-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  color: #171717;
+  margin: 10px 0;
+}
+
+.showcase-heading h2 b {
+  color: #ed2d1d;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 280px);
+  gap: 25px;
+}
+
+.showcase-item {
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.showcase-item:first-child {
+  grid-row: span 2;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.showcase-item:hover img {
+  transform: scale(1.08);
+}
+
+.showcase-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 30px;
+}
+
+.showcase-modal-content {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.showcase-modal-img {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.showcase-modal-title {
+  font-family: Georgia, "Times New Roman", serif;
+  color: white;
+  font-size: 30px;
+  margin: 25px 0 12px;
+}
+
+.showcase-modal-desc {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.showcase-modal-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.showcase-modal-nav button {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.showcase-next-button {
+  background: #ed2d1d !important;
+}
+
+.showcase-modal-nav button:hover {
+  opacity: 0.85;
+}
+
+.showcase-modal-close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 220px);
+  }
+
+  .showcase-item:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .showcase-item:first-child {
+    grid-column: span 1;
+  }
+}
