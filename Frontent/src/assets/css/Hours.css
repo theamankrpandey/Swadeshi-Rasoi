@@ -1,0 +1,195 @@
+.hours-section {
+  padding: 90px 7%;
+  background: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 12px
+    ),
+    #154a31;
+}
+
+.hours-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.hours-heading span {
+  color: #a8d5bb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.hours-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  color: white;
+  margin: 10px 0;
+}
+
+.hours-heading h2 b {
+  color: #f5a623;
+}
+
+.hours-underline {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #ed2d1d, #f5a623);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.hours-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.3fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.hours-card {
+  border-radius: 20px;
+  padding: 35px 40px;
+}
+
+.hours-schedule-card,
+.hours-contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-icon {
+  margin-right: 10px;
+}
+
+.hours-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.hours-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hours-open .hours-dot {
+  background: #4ade80;
+}
+
+.hours-open {
+  color: white;
+}
+
+.hours-closed .hours-dot {
+  background: #f5677a;
+}
+
+.hours-closed {
+  color: #f5677a;
+}
+
+.hours-order-card {
+  background: #ed2d1d;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(237, 45, 29, 0.45);
+}
+
+.hours-order-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hours-order-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: white;
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+
+.hours-order-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.hours-order-button {
+  border: none;
+  background: white;
+  color: #ed2d1d;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hours-order-button:hover {
+  transform: translateY(-3px);
+}
+
+.hours-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 15px;
+}
+
+.hours-contact-row:last-child {
+  border-bottom: none;
+}
+
+.hours-contact-row span:last-child {
+  font-weight: 700;
+  color: #f5a623;
+}
+
+.hours-contact-title {
+  color: #f5a623;
+  border-bottom: none;
+  padding-top: 0;
+}
+
+.hours-contact-title strong {
+  font-size: 17px;
+}
+
+@media (max-width: 1000px) {
+  .hours-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hours-card {
+    padding: 25px;
+  }
+
+  .hours-row,
+  .hours-contact-row {
+    font-size: 14px;
+  }
+}

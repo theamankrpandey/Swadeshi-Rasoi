@@ -1,6 +1,8 @@
 .showcase-section {
+  height: 750px;
+  width: 100%;
   padding: 90px 7%;
-  background: #fffaf4;
+  background: #f2f1f1;
 }
 
 .showcase-heading {
@@ -29,8 +31,9 @@
 .showcase-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: repeat(2, 280px);
+  grid-template-rows: repeat(2, 200px);
   gap: 25px;
+
 }
 
 .showcase-item {

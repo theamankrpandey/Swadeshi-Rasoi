@@ -1,0 +1,143 @@
+.chef-section {
+    padding: 90px 7%;
+    background: white;
+}
+
+.chef-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.chef-heading span {
+    color: #ed2d1d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.chef-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    color: #171717;
+    margin: 10px 0;
+}
+
+.chef-heading h2 b {
+    color: #ed2d1d;
+}
+
+.chef-underline {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #ed2d1d, #f5a623);
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.chef-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.chef-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.chef-card:hover {
+    transform: translateY(-6px);
+}
+
+.chef-img-wrap {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.chef-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chef-social {
+  position: absolute;
+  bottom: -70px;
+  left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 0;
+  background: #a9a7a748;
+  transition: 0.35s;
+}
+
+
+.chef-social a:hover {
+  background: #ed2d1d;
+  color: white;
+}
+
+.chef-img-wrap:hover .chef-social {
+    bottom: 20px;
+}
+
+.chef-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.chef-social a:hover {
+    transform: scale(1.1);
+}
+
+.chef-info {
+    padding: 20px 22px;
+}
+
+.chef-name {
+    font-size: 19px;
+    font-weight: 800;
+    color: #171717;
+    margin: 0 0 5px;
+}
+
+.chef-role {
+    color: #ed2d1d;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chef-experience {
+    color: #999;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1000px) {
+    .chef-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .chef-container {
+        grid-template-columns: 1fr;
+    }
+}

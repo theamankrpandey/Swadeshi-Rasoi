@@ -9,6 +9,9 @@ import { addToCart } from "../CartSlice";
 import Menu from "../components/Menu";
 import Offer from "./Offer";
 import FoodShow from "../components/FoodShow";
+import Journey from "../components/Journey";
+import Chefs from "../components/Chefs";
+import Hours from "../components/Hours";
 
 const Home = () => {
   const [mydata, setMydata] = useState([]);
@@ -55,7 +58,8 @@ const Home = () => {
   return (
     <div className="home-page">
       <section
-        className="home-section" id="home-section"
+        className="home-section"
+        id="home-section"
         style={{
           backgroundImage: `url(${background_image})`,
         }}
@@ -319,15 +323,27 @@ const Home = () => {
       </section>
 
       <section>
-        <Menu/>
+        <Menu />
       </section>
 
       <section>
-        <Offer/>
+        <Offer />
       </section>
 
       <section>
-        <FoodShow/>
+        <FoodShow />
+      </section>
+
+      <section>
+        <Journey />
+      </section>
+
+      <section>
+        <Chefs/>
+      </section>
+      
+      <section>
+        <Hours/>
       </section>
     </div>
   );
