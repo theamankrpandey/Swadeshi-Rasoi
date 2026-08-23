@@ -1,0 +1,130 @@
+.review-section {
+  padding: 90px 7%;
+  background: white;
+}
+
+.review-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.review-heading span {
+  color: #ed2d1d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.review-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  color: #171717;
+  margin: 10px 0;
+}
+
+.review-heading h2 b {
+  color: #ed2d1d;
+}
+
+.review-underline {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #ed2d1d, #f5a623);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background: #fdf1e7;
+  border-radius: 20px;
+  padding: 35px 30px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.review-stars {
+  color: #f5a623;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.review-quote {
+  font-size: 50px;
+  color: rgba(12, 2, 1, 0.566);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.review-text {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  min-height: 110px;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-user img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ed2d1d;
+}
+
+.review-user h4 {
+  font-size: 16px;
+  color: #171717;
+  margin: 0;
+}
+
+.review-user small {
+  color: #999;
+  font-size: 13px;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.review-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.review-dot-active {
+  background: #2563eb;
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1000px) {
+  .review-container {
+    grid-template-columns: 1fr;
+  }
+}

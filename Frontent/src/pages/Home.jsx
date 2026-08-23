@@ -12,6 +12,8 @@ import FoodShow from "../components/FoodShow";
 import Journey from "../components/Journey";
 import Chefs from "../components/Chefs";
 import Hours from "../components/Hours";
+import Reviews from "../components/Reviews";
+import Reservation from "../components/Reservation";
 
 const Home = () => {
   const [mydata, setMydata] = useState([]);
@@ -339,11 +341,19 @@ const Home = () => {
       </section>
 
       <section>
-        <Chefs/>
+        <Chefs />
       </section>
-      
+
       <section>
-        <Hours/>
+        <Hours />
+      </section>
+
+      <section>
+        <Reviews />
+      </section>
+
+      <section>
+        <Reservation/>
       </section>
     </div>
   );
