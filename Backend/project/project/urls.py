@@ -26,9 +26,11 @@ router.register(r"items", ItemViewSet, basename="items")
 router.register(r"foodshow", FoodShowViewSet, basename="foodshow")
 router.register(r"chefs", ChefViewSet, basename="chefs")
 router.register(r"reviews", ReviewViewSet, basename="reviews")
-router.register(r"reservations", ReservationViewSet, basename="reservations")
+router.register(r"Reservation", ReservationViewSet, basename="Reservation")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    # path('reservations/', reservation, name="reservation")
     
 ]
